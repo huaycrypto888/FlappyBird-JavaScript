@@ -71,7 +71,7 @@ function draw(){
              
         pipe[i].x--;
         
-        if( pipe[i].x == 170 ){ // ความห่างของท่อ
+        if( pipe[i].x == 60 ){ // ความห่างของท่อ
             pipe.push({
                 x : cvs.width,// ความห่างของท่อ
                 y : Math.floor(Math.random()*pipeNorth.height)-pipeNorth.height
