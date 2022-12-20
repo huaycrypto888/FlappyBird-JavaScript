@@ -18,14 +18,14 @@ pipeSouth.src = "images/pipeSouth.png";
 
 // some variables
 
-var gap = 85; // ความว่างของช่องที่รอด
+var gap = 100; // ความว่างของช่องที่รอด
 var constant;
 
 
 var bX = 10; // ความชิดของนก จากด้านซ้าย
 var bY = 150; // จุดเริ่มปล่อยนกบนความสูง
 
-var gravity = 1.5; // แรงโน้มถ่วง
+var gravity = 1.0; // แรงโน้มถ่วง
 var score = 0;
 
 // audio files
@@ -41,7 +41,7 @@ scor.src = "sounds/score.mp3";
 document.addEventListener("keydown",moveUp);
 
 function moveUp(){
-    bY -= 10; // กระโดด
+    bY -= 15; // กระโดด
     fly.play();
 }
 
@@ -71,7 +71,7 @@ function draw(){
              
         pipe[i].x--;
         
-        if( pipe[i].x == 125 ){ // ความห่างของท่อ
+        if( pipe[i].x == 100 ){ // ความห่างของท่อ
             pipe.push({
                 x : cvs.width,// ความห่างของท่อ
                 y : Math.floor(Math.random()*pipeNorth.height)-pipeNorth.height
